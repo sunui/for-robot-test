@@ -5,7 +5,7 @@
 > * 译者：[jianboy](https://github.com/jianboy)
 > * 校对者：[suineJWL](https://github.com/suineJWL)
 
-# 如何组织 Hacktoberfest 主题聚会
+# 如何组织 Hacktoberfest 主题聚会！
 
 ### 步骤
 
