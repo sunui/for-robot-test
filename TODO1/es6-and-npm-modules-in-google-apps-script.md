@@ -5,7 +5,7 @@
 > * 译者：
 > * 校对者：
 
-# 在 Google Apps 脚本中使用ES6和 npm 模块!
+# 在 Google Apps 脚本中使用 ES6 和 npm 模块！
 
 > Google 的 Apps 脚本对于所有的 JavaScript 开发者应该都是有趣的。\
 > Apps 脚本有很好的自动化。通过它，你可以直接访问 Google 的很多服务，比如 Google 表格，Google 邮箱，Google 文档，Google 日历等。
@@ -402,6 +402,6 @@ npm run deploy
 
 > 如果发现译文存在错误或其他需要改进的地方，欢迎到 [掘金翻译计划](https://github.com/xitu/gold-miner) 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 **本文永久链接** 即为本文在 GitHub 上的 MarkDown 链接。
 
-***
+---
 
 > [掘金翻译计划](https://github.com/xitu/gold-miner) 是一个翻译优质互联网技术文章的社区，文章来源为 [掘金](https://juejin.im) 上的英文分享文章。内容覆盖 [Android](https://github.com/xitu/gold-miner#android)、[iOS](https://github.com/xitu/gold-miner#ios)、[前端](https://github.com/xitu/gold-miner#前端)、[后端](https://github.com/xitu/gold-miner#后端)、[区块链](https://github.com/xitu/gold-miner#区块链)、[产品](https://github.com/xitu/gold-miner#产品)、[设计](https://github.com/xitu/gold-miner#设计)、[人工智能](https://github.com/xitu/gold-miner#人工智能)等领域，想要查看更多优质译文请持续关注 [掘金翻译计划](https://github.com/xitu/gold-miner)、[官方微博](http://weibo.com/juejinfanyi)、[知乎专栏](https://zhuanlan.zhihu.com/juejinfanyi)。
