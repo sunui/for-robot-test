@@ -5,7 +5,7 @@
 > * 译者：[geniusq1981](https://github.com/geniusq1981)
 > * 校对者：[DAA233](https://github.com/DAA233)
 
-# 如何使用 Pandas 重写你的 SQL 查询以及其他操作
+# 如何使用 Pandas 重写你的 SQL 查询以及其他操作!
 
 ![](https://cdn-images-1.medium.com/max/800/1*gKYCyrcudAeE5e5KAbRhBQ.jpeg)
 
