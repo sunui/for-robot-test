@@ -5,7 +5,7 @@
 > * 译者：
 > * 校对者：
 
-# 在 Google Apps 脚本中使用 ES6 和 npm 模块！!
+# 在 Google Apps脚本中使用ES6和 npm 模块！!
 
 > Google 的 Apps 脚本对于所有的 JavaScript 开发者应该都是有趣的。\
 > Apps 脚本有很好的自动化。通过它，你可以直接访问 Google 的很多服务，比如 Google 表格，Google 邮箱，Google 文档，Google 日历等。
