@@ -5,13 +5,13 @@
 > * 译者：[Hopsken](https://blog.hopsken.com)
 > * 校对者：[ThomasWhyne](https://github.com/ThomasWhyne) [Park-ma](https://github.com/Park-ma)
 
-# 五个小技巧让你写出更好的 JavaScript 条件语句!
+# 五个小技巧让你写出更好的 JavaScript 条件语句！
 
 ![](https://scotch-res.cloudinary.com/image/upload/dpr_1,w_1050,q_auto:good,f_auto/v1536994013/udpahiv8rqlemvz0x3wc.png)
 
 在使用 JavaScript 时，我们常常要写不少的条件语句。这里有五个小技巧，可以让你写出更干净、漂亮的条件语句。
 
-## 1. 使用 Array.includes 来处理多重条件
+## 1。使用 Array.includes 来处理多重条件
 
 举个栗子 🌰：
 
@@ -41,12 +41,12 @@ function test(fruit) {
 
 我们把`红色的水果`（条件）都提取到一个数组中，这使得我们的代码看起来更加整洁。
 
-## 2. 少写嵌套，尽早返回
+## 2。少写嵌套，尽早返回
 
 让我们为之前的例子添加两个条件：
 
-*   如果没有提供水果，抛出错误。
-*   如果该水果的数量大于 10，将其打印出来。
+* 如果没有提供水果，抛出错误。
+* 如果该水果的数量大于 10，将其打印出来。
 
 ```javascript
 function test(fruit, quantity) {
@@ -75,8 +75,9 @@ test('apple', 20); // 打印：red，big quantity
 ```
 
 让我们来仔细看看上面的代码，我们有：
-*   1 个 if/else 语句来筛选无效的条件
-*   3 层 if 语句嵌套（条件 1，2 & 3）
+
+* 1 个 if/else 语句来筛选无效的条件
+* 3 层 if 语句嵌套（条件 1，2 & 3）
 
 就我个人而言，我遵循的一个总的规则是**当发现无效条件时尽早返回**。
 
@@ -104,6 +105,7 @@ function test(fruit, quantity) {
 如此一来，我们就少写了一层嵌套。这是种很好的代码风格，尤其是在 if 语句很长的时候（试想一下，你得滚动到底部才能知道那儿还有个 else 语句，是不是有点不爽）。
 
 如果反转一下条件，我们还可以进一步地减少嵌套层级。注意观察下面的条件 2 语句，看看是如何做到这点的：
+
 ```javascript
 /_ 当发现无效条件时尽早返回 _/
 
@@ -128,15 +130,15 @@ function test(fruit, quantity) {
 
 是我的话，我会选择前一个版本（条件 2 有嵌套）。原因在于：
 
-*   这样的代码比较简短和直白，一个嵌套的 if 使得结构更加清晰。
-*   条件反转会导致更多的思考过程（增加认知负担）。
+* 这样的代码比较简短和直白，一个嵌套的 if 使得结构更加清晰。
+* 条件反转会导致更多的思考过程（增加认知负担）。
 
 因此，**始终追求更少的嵌套，更早地返回，但是不要过度**。感兴趣的话，这里有篇关于这个问题的文章以及 StackOverflow 上的讨论：
 
-*   [Avoid Else, Return Early](http://blog.timoxley.com/post/47041269194/avoid-else-return-early) by Tim Oxley
-*   [StackOverflow discussion](https://softwareengineering.stackexchange.com/questions/18454/should-i-return-from-a-function-early-or-use-an-if-statement) on if/else coding style
+* [Avoid Else, Return Early](http://blog.timoxley.com/post/47041269194/avoid-else-return-early) by Tim Oxley
+* [StackOverflow discussion](https://softwareengineering.stackexchange.com/questions/18454/should-i-return-from-a-function-early-or-use-an-if-statement) on if/else coding style
 
-## 3. 使用函数默认参数和解构
+## 3。使用函数默认参数和解构
 
 我猜你也许很熟悉以下的代码，在 JavaScript 中我们经常需要检查 `null` / `undefined` 并赋予默认值：
 
@@ -203,12 +205,12 @@ test({ name: 'apple', color: 'red' }); // apple
 
 既然我们只需要 fruit 的 `name` 属性，我们可以使用 `{name}` 来将其解构出来，之后我们就可以在代码中使用 `name` 变量来取代 `fruit.name`。
 
-我们还使用 `{}` 作为其默认值。如果我们不这么做的话，在执行 `test(undefined)` 时，你会得到一个错误 `Cannot destructure property name of 'undefined' or 'null'.`，因为 `undefined` 上并没有 `name` 属性。（译者注：这里不太准确，其实因为解构只适用于对象（Object），而不是因为`undefined` 上并没有 `name` 属性（空对象上也没有）。参考[解构赋值 - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）
+我们还使用 `{}` 作为其默认值。如果我们不这么做的话，在执行 `test(undefined)` 时，你会得到一个错误 `Cannot destructure property name of 'undefined' or 'null'.`，因为 `undefined` 上并没有 `name` 属性。（译者注：这里不太准确，其实因为解构只适用于对象（Object），而不是因为`undefined` 上并没有 `name` 属性（空对象上也没有）。参考[解构赋值 ——MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）
 
 如果你不介意使用第三方库的话，有一些方法可以帮助减少空值（null）检查：
 
-*   使用 [Lodash get](https://lodash.com/docs/4.17.10#get) 函数
-*   使用 Facebook 开源的 [idx](https://github.com/facebookincubator/idx) 库（需搭配 Babeljs）
+* 使用 [Lodash get](https://lodash.com/docs/4.17.10#get) 函数
+* 使用 Facebook 开源的 [idx](https://github.com/facebookincubator/idx) 库（需搭配 Babeljs）
 
 这里有一个使用 Lodash 的例子：
 
@@ -224,9 +226,9 @@ test({ }); // unknown
 test({ name: 'apple', color: 'red' }); // apple
 ```
 
-你可以在[这里](http://jsbin.com/bopovajiye/edit?js,console)运行演示代码。另外，如果你偏爱函数式编程（FP），你可以选择使用 [Lodash fp](https://github.com/lodash/lodash/wiki/FP-Guide)——函数式版本的 Lodash（方法名变为 `get` 或 `getOr`）。
+你可以在[这里](http://jsbin.com/bopovajiye/edit?js,console)运行演示代码。另外，如果你偏爱函数式编程（FP），你可以选择使用 [Lodash fp](https://github.com/lodash/lodash/wiki/FP-Guide)—— 函数式版本的 Lodash（方法名变为 `get` 或 `getOr`）。
 
-## 4. 相较于 switch，Map / Object 也许是更好的选择
+## 4。相较于 switch，Map / Object 也许是更好的选择
 
 让我们看下面的例子，我们想要根据颜色打印出各种水果：
 
@@ -308,7 +310,7 @@ function test(color) {
 
 解决问题的方法永远不只一种。对于这个例子我们展示了四种实现方法。Coding is fun！
 
-## 5. 使用 Array.every 和 Array.some 来处理全部/部分满足条件
+## 5。使用 Array.every 和 Array.some 来处理全部 / 部分满足条件
 
 最后一个小技巧更多地是关于使用新的（也不是很新了）JavaScript 数组函数来减少代码行数。观察以下的代码，我们想要检查是否所有的水果都是红色的：
 
@@ -373,7 +375,6 @@ function test() {
 就是这样啦。Happy coding！
 
 > 如果发现译文存在错误或其他需要改进的地方，欢迎到 [掘金翻译计划](https://github.com/xitu/gold-miner) 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 **本文永久链接** 即为本文在 GitHub 上的 MarkDown 链接。
-
 
 ---
 
