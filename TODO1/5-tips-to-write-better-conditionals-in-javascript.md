@@ -5,7 +5,7 @@
 > * 译者：[Hopsken](https://blog.hopsken.com)
 > * 校对者：[ThomasWhyne](https://github.com/ThomasWhyne) [Park-ma](https://github.com/Park-ma)
 
-# 五个小技巧让你写出更好的 JavaScript 条件语句
+# 五个小技巧让你写出更好的 JavaScript 条件语句!
 
 ![](https://scotch-res.cloudinary.com/image/upload/dpr_1,w_1050,q_auto:good,f_auto/v1536994013/udpahiv8rqlemvz0x3wc.png)
 
